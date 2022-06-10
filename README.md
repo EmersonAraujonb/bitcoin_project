@@ -28,6 +28,13 @@ Tabela de conteúdos
 	🚀  Vuejs 🚀 Concluido...  🚀
 </h4>
 
+### Features
+
+- ✅ Valor atual do Bitcoin
+- ✅ Layout resposive
+- ✅ Pesquisa por data/hora
+- ✅ Tailwind CSS
+
 ## Project setup
 ```
 npm install
