@@ -23,6 +23,11 @@ Tabela de conteúdos
  <a href="#autor">Autor</a>
 </p>
 
+## ✅ Status do Projeto
+<h4 align="center"> 
+	🚀  Vuejs 🚀 Concluido...  🚀
+</h4>
+
 ## Project setup
 ```
 npm install
