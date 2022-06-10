@@ -8,6 +8,8 @@
 </h1>
 <p align="center">🚀 lib to build responsive UIs</p>
 
+## License
+
 [![GitHub license](https://img.shields.io/github/license/EmersonAraujonb/bitcoin_project)](https://github.com/EmersonAraujonb/bitcoin_project/blob/main/LICENSE)
 
 
