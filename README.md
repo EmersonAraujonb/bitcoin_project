@@ -43,38 +43,30 @@ Before starting, you will need to have the following tools installed on your mac
 ### 🎲 Running project (server)
 
 ```bash
-# Clone este repositório
+# Clone this repository
 $ git clone https://github.com/EmersonAraujonb/bitcoin_project.git
 
-# Acesse a pasta do projeto no terminal/cmd
+# Access the project folder in terminal/cmd
 $ cd bitcoin_project
 
-# Vá para a pasta bitcoin_project
-$ cd bitcoin_project
-
-# Instale as dependências
+# Install dependencies
 $ npm install
 
-# Execute a aplicação em modo de desenvolvimento
-$ npm run dev:server
+# Run the application in development mode
+$ npm run server
 
-# O servidor inciará na porta:3333 - acesse <http://localhost:3333>
-```
-
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
+# Server will start on port:8080 - go to <http://localhost:8080>
 ```
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+### 🛠 Tecnologias
+
+As seguintes ferramentas foram usadas na construção do projeto:
+
+- [Vuejs](https://vuejs.org)
+- [Node.js](https://nodejs.org/en/)
+- [Tailwind CSS](https://v2.tailwindcss.com)
+- [Axios](https://axios-http.com)
+- [Moment](https://momentjs.com)
