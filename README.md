@@ -20,7 +20,7 @@ Table of contents
  <a href="#features">Features</a> • 
  <a href="#prerequisites">Prerequisites</a> • 
  <a href="#license">License</a> • 
- <a href="#author.md">Author</a>
+ <a href="#author">Author</a>
 </p>
 
 ## ✅ Project Status
