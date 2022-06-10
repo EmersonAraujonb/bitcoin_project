@@ -1,5 +1,5 @@
 # Author
 
-Emerson Araujo
+**_Emerson Araújo_**
 
-feito com muita dedidaçao por Emerson Araújo Entre em contato!
+Feito com muita dedidaçao por **_Emerson Araújo_** Entre em contato!
