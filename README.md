@@ -1,4 +1,7 @@
-# bitcoin_project
+# Bitcoin project
+
+## Project description
+<p align="center">The bitcoin project aims to show the value of bitcoin in real time, the application also has a date/time search engine.</p>
 
 ## Project setup
 ```
