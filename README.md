@@ -20,10 +20,10 @@ Table of contents
  <a href="#features">Features</a> • 
  <a href="#prerequisites">Prerequisites</a> • 
  <a href="#license">License</a> • 
- <a href="#author.md">Author</a>
+ <a href="#https://github.com/EmersonAraujonb/bitcoin_project/blob/main/author.md">Author</a>
 </p>
 
-https://github.com/EmersonAraujonb/bitcoin_project/blob/main/author.md
+
 
 ## ✅ Project Status
 <h4 align="center"> 
