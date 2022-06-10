@@ -34,7 +34,7 @@
             >Search bitcoin value by desired date!</span
           >
           <p class="flex text-center justify-center font-bold text-3xl p-3"></p>
-          <span class="m-2 font-bold" required >Initial date/time:</span>
+          <span class="m-2 font-bold" required>Initial date/time:</span>
           <input
             class="border-black p-3 eft-px"
             type="datetime-local"
@@ -64,18 +64,23 @@
           </button>
         </form>
       </div>
-      <table class=" text-center justify-center left-10 flex-grid table-fixed border-separate border border-black">
-    <tr>
-      <th class="w-1/2">⬇️Price history⬇️</th>
-    </tr>
-    <tr v-for="value in bitcoinHistory" :key="value">
-    <td class="w-1/2">
-       R${{
-        value
-      }}
-    </td>
-    </tr>
-    </table>
+      <table
+        class="
+          text-center
+          justify-center
+          left-10
+          flex-grid
+          table-fixed
+          border-separate border border-black
+        "
+      >
+        <tr>
+          <th class="w-1/2">⬇️Price history⬇️</th>
+        </tr>
+        <tr v-for="value in bitcoinHistory" :key="value">
+          <td class="w-1/2">R${{ value }}</td>
+        </tr>
+      </table>
     </div>
   </div>
 </template>
@@ -92,53 +97,57 @@ export default {
       image:
         "https://assets.coingecko.com/coins/images/1/thumb/bitcoin.png?1547033579",
     };
-   },
-   methods: {
-      createArray(price) {
+  },
+  methods: {
+    createArray(price) {
       const arr = [];
-      price.split(',R$').map((value, e) => {
+      price.split(",R$").map((value, e) => {
         if (e % 2 === 1 && e !== 0) {
           arr.push(value);
         }
       });
       this.bitcoinHistory = arr;
     },
-     async getBitcoin() {
-        const response = await api.get(
-          "simple/price?ids=bitcoin&vs_currencies=brl"
-        )
-          this.bitcoin = response.data.bitcoin.brl.toLocaleString("pt-BR" ,{
-            currency:"BRL"
-          });
-          this.getBitcoin();
+    async getBitcoin() {
+      const response = await api.get(
+        "simple/price?ids=bitcoin&vs_currencies=brl"
+      );
+      this.bitcoin = response.data.bitcoin.brl.toLocaleString("pt-BR", {
+        currency: "BRL",
+      });
+      this.getBitcoin();
     },
     async getHistory() {
-      const dateTimeInitial = document.querySelector("#dateTimeInitial"); 
-      const dateTimeEnd = document.querySelector("#dateTimeEnd"); 
-      this.dateTimeInitial = moment(String(dateTimeInitial.value)).unix("DD-MM-YYYYTHH:mm:ss a");
-      this.dateTimeEnd = moment(String(dateTimeEnd.value)).unix("DD-MM-YYYYTHH:mm:ss a")
-      console.log(this.dateTimeInitial)
-      console.log(this.dateTimeEnd)
+      const dateTimeInitial = document.querySelector("#dateTimeInitial");
+      const dateTimeEnd = document.querySelector("#dateTimeEnd");
+      this.dateTimeInitial = moment(String(dateTimeInitial.value)).unix(
+        "DD-MM-YYYYTHH:mm:ss a"
+      );
+      this.dateTimeEnd = moment(String(dateTimeEnd.value)).unix(
+        "DD-MM-YYYYTHH:mm:ss a"
+      );
+      console.log(this.dateTimeInitial);
+      console.log(this.dateTimeEnd);
       const response = await api.get(
         `/coins/bitcoin/market_chart/range?vs_currency=brl&from=${this.dateTimeInitial}&to=${this.dateTimeEnd}`
       );
       const price = response.data.prices.toLocaleString("pt-BR", {
         style: "currency",
-        currency:"BRL"
+        currency: "BRL",
       });
-         this.createArray(price);
-     }
+      this.createArray(price);
     },
-    computed: {
-      Random(){
-         const cent= Math.round(Math.random()*(9-0)+0);
-         return `${cent}${cent}`
-      }
+  },
+  computed: {
+    Random() {
+      const cent = Math.round(Math.random() * (9 - 0) + 0);
+      return `${cent}${cent}`;
     },
-     mounted() {
-     this.getBitcoin();
-    }
-}
+  },
+  mounted() {
+    this.getBitcoin();
+  },
+};
 </script>
 <style scoped>
 </style>

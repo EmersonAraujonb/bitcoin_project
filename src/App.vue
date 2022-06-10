@@ -1,15 +1,15 @@
 <template>
-  <PageBitcoin/>
+  <PageBitcoin />
 </template>
 <script>
-import PageBitcoin from './components/PageBitcoin.vue'
+import PageBitcoin from "./components/PageBitcoin.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-   PageBitcoin,
-  }
-}
+    PageBitcoin,
+  },
+};
 </script>
 
 <style>
