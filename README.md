@@ -40,17 +40,17 @@ Table of contents
 
 Before starting, you will need to have the following tools installed on your machine: [Git](https://git-scm.com),  [Node.js](https://nodejs.org/en/).  Besides, it's good to have an editor to work with the code like [VSCode](https://code.visualstudio.com/)
 
-### 🎲 Rodando o Back End (servidor)
+### 🎲 Running project (server)
 
 ```bash
 # Clone este repositório
-$ git clone <https://github.com/tgmarinho/nlw1>
+$ git clone https://github.com/EmersonAraujonb/bitcoin_project.git
 
 # Acesse a pasta do projeto no terminal/cmd
-$ cd nlw1
+$ cd bitcoin_project
 
-# Vá para a pasta server
-$ cd server
+# Vá para a pasta bitcoin_project
+$ cd bitcoin_project
 
 # Instale as dependências
 $ npm install
