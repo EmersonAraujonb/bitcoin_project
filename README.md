@@ -17,10 +17,10 @@ Table of contents
 <p align="center">
  <a href="#project-description">Description</a> •
  <a href="#license">License</a> • 
- <a href="#tecnologias">Tecnologias</a> • 
- <a href="#contribuicao">Contribuição</a> • 
- <a href="#licenc-a">Licença</a> • 
- <a href="#autor">Autor</a>
+ <a href="#features">Features</a> • 
+ <a href="#prerequisites">Prerequisites</a> • 
+ <a href="#license">License</a> • 
+ <a href="#author">Author</a>
 </p>
 
 ## ✅ Project Status
@@ -36,7 +36,7 @@ Table of contents
 - ✅ Tailwind CSS
 
 ## ✅ Prerequisites and how to run the application
-### Pré-requisitos
+### Prerequisites
 
 Before starting, you will need to have the following tools installed on your machine: [Git](https://git-scm.com),  [Node.js](https://nodejs.org/en/).  Besides, it's good to have an editor to work with the code like [VSCode](https://code.visualstudio.com/)
 
