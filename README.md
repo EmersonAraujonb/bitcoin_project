@@ -12,7 +12,7 @@
 
 [![GitHub license](https://img.shields.io/github/license/EmersonAraujonb/bitcoin_project)](https://github.com/EmersonAraujonb/bitcoin_project/blob/main/LICENSE)
 
-Tabela de conteúdos
+Table of contents
 =================
 <p align="center">
  <a href="#project-description">Description</a> •
@@ -23,17 +23,43 @@ Tabela de conteúdos
  <a href="#autor">Autor</a>
 </p>
 
-## ✅ Status do Projeto
+## ✅ Project Status
 <h4 align="center"> 
-	🚀  Vuejs 🚀 Concluido...  🚀
+	🚀  Vuejs 🚀 Concluded...  🚀
 </h4>
 
 ### Features
 
-- ✅ Valor atual do Bitcoin
-- ✅ Layout resposive
-- ✅ Pesquisa por data/hora
+- ✅ Current value of Bitcoin
+- ✅ Responsive layout
+- ✅ Search by date/time
 - ✅ Tailwind CSS
+
+## ✅ Prerequisites and how to run the application
+### Pré-requisitos
+
+Before starting, you will need to have the following tools installed on your machine: [Git](https://git-scm.com),  [Node.js](https://nodejs.org/en/).  Besides, it's good to have an editor to work with the code like [VSCode](https://code.visualstudio.com/)
+
+### 🎲 Rodando o Back End (servidor)
+
+```bash
+# Clone este repositório
+$ git clone <https://github.com/tgmarinho/nlw1>
+
+# Acesse a pasta do projeto no terminal/cmd
+$ cd nlw1
+
+# Vá para a pasta server
+$ cd server
+
+# Instale as dependências
+$ npm install
+
+# Execute a aplicação em modo de desenvolvimento
+$ npm run dev:server
+
+# O servidor inciará na porta:3333 - acesse <http://localhost:3333>
+```
 
 ## Project setup
 ```
