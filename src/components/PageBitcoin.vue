@@ -1,16 +1,21 @@
 <template>
   <div id="container">
-    <h2 class="bg-gray-300 p-5 text-center my-5 shadow-4xl font-bold text-3xl" id="title">
+    <h2
+      class="bg-gray-300 p-5 text-center my-5 shadow-4xl font-bold text-3xl"
+      id="title"
+    >
       Bitcoin (BTC)
     </h2>
     <div class="items-center md:grid justify-center m-4" id="container">
-      <div class="flex text-center justify-center font-bold text-5xl" id="container">
-        <img class="w-12 h-14 " v-bind:src="image" />
-       {{`${bitcoin},${Random}`}}
+      <div
+        class="flex text-center justify-center font-bold text-5xl"
+        id="container"
+      >
+        <img class="w-12 h-14" v-bind:src="image" />
+        {{ `${bitcoin},${Random}` }}
       </div>
       <div
         class="
-        
           items-center
           justify-center
           bg-gray-300
@@ -22,16 +27,26 @@
         id="container"
       >
         <form
-          class="items-center  p-4 justify-center text-center"
+          class="items-center p-4 justify-center text-center"
           @submit.prevent="getHistory"
         >
-        <span class="font-bold italic">Search bitcoin value by desired date!</span>
-         <p class="flex text-center justify-center font-bold text-3xl p-3"></p>
-          <span class="m-2 font-bold">Initial date/time:</span>
-          <input class="border-black p-3 eft-px" step="00:15" type="datetime-local" id="dateTimeInitial" /><br>
+          <span class="font-bold italic"
+            >Search bitcoin value by desired date!</span
+          >
+          <p class="flex text-center justify-center font-bold text-3xl p-3"></p>
+          <span class="m-2 font-bold" required >Initial date/time:</span>
+          <input
+            class="border-black p-3 eft-px"
+            type="datetime-local"
+            id="dateTimeInitial"
+          /><br />
           <span class="m-3.5 font-bold">End date/time:</span>
-          <input class="border-black p-3 m-2" step="00:15" type="datetime-local" id="dateTimeEnd" />
-          <br>
+          <input
+            class="border-black p-3 m-2"
+            type="datetime-local"
+            id="dateTimeEnd"
+          />
+          <br />
           <button
             class="
               m-4
@@ -45,18 +60,23 @@
             "
             type="submit"
           >
-          Search
+            Search
           </button>
         </form>
-        <!--<p class="flex text-center justify-center font-bold text-3xl p-3">{{bitcoinHistory}}</p>-->
       </div>
+      <table class=" text-center justify-center left-10 flex-grid table-fixed border-separate border border-black">
+    <tr>
+      <th class="w-1/2">⬇️Price history⬇️</th>
+    </tr>
+    <tr v-for="value in bitcoinHistory" :key="value">
+    <td class="w-1/2">
+       R${{
+        value
+      }}
+    </td>
+    </tr>
+    </table>
     </div>
-      <tr>
-        <th class="w-1/2">Prices</th>
-      </tr>
-      <tr v-for=" value in bitcoinHistory" :key="value">
-          {{qual(value)}}
-        </tr>
   </div>
 </template>
 <script>
@@ -72,11 +92,16 @@ export default {
       image:
         "https://assets.coingecko.com/coins/images/1/thumb/bitcoin.png?1547033579",
     };
-  },
-  methods: {
-    qual(e){
-      console.log({e})
-      return e
+   },
+   methods: {
+      createArray(price) {
+      const arr = [];
+      price.split(',R$').map((value, e) => {
+        if (e % 2 === 1 && e !== 0) {
+          arr.push(value);
+        }
+      });
+      this.bitcoinHistory = arr;
     },
      async getBitcoin() {
         const response = await api.get(
@@ -97,23 +122,23 @@ export default {
       const response = await api.get(
         `/coins/bitcoin/market_chart/range?vs_currency=brl&from=${this.dateTimeInitial}&to=${this.dateTimeEnd}`
       );
-      this.bitcoinHistory = response.data.prices.toLocaleString("pt-BR",{
+      const price = response.data.prices.toLocaleString("pt-BR", {
         style: "currency",
         currency:"BRL"
       });
-      console.log(this.bitcoinHistory.slice(23-34))
+         this.createArray(price);
+     }
     },
-  },
-  computed: {
-     Random(){
-      const cent= Math.round(Math.random()*(9-0)+0);
-      return `${cent}${cent}`
+    computed: {
+      Random(){
+         const cent= Math.round(Math.random()*(9-0)+0);
+         return `${cent}${cent}`
+      }
+    },
+     mounted() {
+     this.getBitcoin();
     }
-  },
-    mounted() {
-    //this.getBitcoin();
-  },
-};
+}
 </script>
 <style scoped>
 </style>
