@@ -1,4 +1,15 @@
-# bitcoin_project
+# Bitcoin project
+
+## Project description
+<p align="center">The bitcoin project aims to show the value of bitcoin in real time, the application also has a date/time search engine.</p>
+
+<h1 align="center">
+    <a href="https://vuejs.org">🔗 Vuejs</a>
+</h1>
+<p align="center">🚀 lib to build responsive UIs</p>
+
+[![GitHub license](https://img.shields.io/github/license/EmersonAraujonb/bitcoin_project?style=for-the-badge)](https://github.com/EmersonAraujonb/bitcoin_project)
+
 
 ## Project setup
 ```
