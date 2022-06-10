@@ -61,9 +61,8 @@ $ npm run server
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
-### 🛠 Tecnologias
-
-As seguintes ferramentas foram usadas na construção do projeto:
+### 🛠 technologies
+The following tools were used in building the project:
 
 - [Vuejs](https://vuejs.org)
 - [Node.js](https://nodejs.org/en/)
